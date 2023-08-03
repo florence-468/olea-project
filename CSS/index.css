@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    min-height: 100vh;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    align-items: center;
+    background-color: white;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 2rem;
+    align-items: center;
+
+   
+}
+nav h1{
+    font-size:2rem ;
+    font-weight: 500;
+}
+nav a{
+    text-decoration: none;
+    color: #333333;
+   text-transform: capitalize;
+   font-weight: 500;
+   font-size: 0.89rem;
+}
+nav #search-icon{
+  border-right: 1px solid #333333; 
+ padding:5px 1rem 5px 0px; 
+  margin-right: 1rem;
+}
+nav #second-ul{
+    gap:0;
+}
+.fa-magnifying-glass{
+    font-size: 1.3rem;
+    color: rgb(37, 37, 37);
+}
+
+.fa-solid fa-cart-shopping{
+    font-size:1.1rem ;
+    color: rgb(37, 37, 37);
+}
+#count{
+    font-size: 0.7rem;
+    border: 1px solid  rgb(37, 37, 37);
+    border-radius:50%;
+    padding: 2px 6px;
+    text-align: center;
+    margin-left: 5px;
+}
+.toggle-btn{
+    border: 2px solid black;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: all 1s ease-in-out;
+}
+.mobile-menu{
+   position: absolute;
+   top: -200vh;
+   left: 0;
+   width: 100%;
+   background-color: white;
+   flex-direction: column;
+   align-items: flex-end;
+   padding-right: 2rem;
+}
+/* end of nav styling */
+
+
+/* beginig of hero text */
+.hero{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+    ),
+     url('../images/herobackground.jfif') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-attachment: fixed;
+    
+}
+.hero hr{
+    width: 50px;
+    border: 1px solid white;
+    margin-bottom: 1.5rem;
+   margin-inline: auto;
+}
+a{
+    text-decoration: none;
+    color: black;
+   
+}
+.hero h1{
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.hero a {
+    color: white;
+}
+.hero p{
+    margin-bottom: 1.5rem;
+}
+
+/* end of header */
+/* beginning of main */
+.sec-one{
+    width: 100%;
+    margin-bottom: 200px;
+}
+.sec-one .wrapper{
+    width: 80%;
+    margin-inline: auto;
+    /* margin inline is margine left and riht */
+    /* margin auto put your work in the center where it has a width */
+    /* margin block  is margin top and bottom */
+    border: 1px solid #333333;
+    padding: 1.5rem 1rem;
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 1.5rem;
+    
+    
+}
+.sec-one .individual-div{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1rem;
+    border-right: 1px solid  #333333;
+   
+}
+.sec-one .img-div{
+    width: 3rem;
+}
+.img-div img{
+    width: 100%;
+    
+}
+/* end of sec-one */
+
+
+
+/* beginnig of sec-tqwo */
+.sec-two {
+    height: 130vh;
+    margin-bottom: 200px;
+
+}
+
+
+.grid-container {
+    width: 80%;
+    margin-inline: auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  25% 25% 15% 35%;
+    gap: 1.2rem;
+
+}
+.individual-imgs {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+.individual-imgs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+    transform: scale(1.2);
+    
+}
+
+
+.individual-imgs:hover img {
+    transform: scale(1.5);
+  }
+
+/* .individual-imgs img:hover {
+    transform: scale(1.5); (150% zoom - Note: if the zoom is too large, it will go outside of the viewport)
+  } */
+
+
+.individual-imgs .text-div {
+    position: absolute;
+    z-index: 100;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    text-align: center;
+    color: white;
+}
+.grid-container h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 0.3rem;
+}
+.grid-container a {
+    color: white;
+    font-size: 0.85rem;
+    text-transform: capitalize;
+}
+
+#one {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+#two {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+#three {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+#four {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+
+
+/* end of sec two */
+/* sec three */
+
+.sec-three{
+    width: 100%;
+}
+.sec-three h1{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-block: 5rem;
+}
+
+
+
+
+.sec-three-wrapper {
+width: 90%;
+margin-inline: auto;
+display: flex;
+gap: 2rem;
+}
+
+.img-div{
+    position: relative;
+}
+
+/* .mag-glass{
+    position: absolute;
+    top: 0;
+    
+} */
+.mag-glass .mag-img{
+    width: 17%;
+    aspect-ratio: 1;
+    /* aspect ratio means give it the same width and height */
+    background-color: white;
+    padding:16px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
+}
+.sec-three a{
+    color: black;
+    display: block;
+    text-align: center;
+    font-size: 1.3  rem;
+    margin-block: 0,5rem;
+    text-transform: capitalize;
+}
+
+.sec-three p{
+    color: #333333;
+    font-size: 1.1rem;
+    text-align: center;
+
+}
+
+.sec-three h6{
+    background-color: #5ccc87;
+    color: white;
+    font-size: 0.9rem;
+    padding: 4px 10px;
+    width: fit-content;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+/* section 4 */
+.sec-four{
+    width: 100%;
+    margin-block: 200px;
+}
+.sec-four .wrapper{
+    width: 75%;
+    margin-inline: auto;
+    position: relative;
+    
+}
+
+
+.sec-four h3{
+background-color: white;
+position: absolute;
+padding-inline: 1rem;
+font-size: 1rem;
+top: -10px;
+left: 50%;
+transform: translate(-50% -10);
+}
+
+
+.sec-four .logo-wrapper{
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+    padding: 1.5rem 2.5rem;
+  
+}
+
+.logo-wrapper{
+    border: 1px solid grey;
+}
+
+.logo-div img{
+width: 100%;
+}
+
+/* section 5 */
+
+.sweater{
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: 
+    linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+     url("../images/sweaterguy.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-attachment: fixed;
+    width: 100%;
+    margin-block: 200px;
+    
+}
+.main-text p{
+    font-size: 5rem;
+    font-weight: 500;
+    margin-bottom: 1rem; 
+}
+.sweater a{
+    font-weight: 400;
+    
+}
+/* section 6 */
+.sec-six
+{
+    width: 100%;
+    margin-bottom: 200px;
+    background-color: rgb(235, 250, 245) ;
+}
+.sec-six a{
+    color: black;
+}
+.sec-six{
+    width: 95%;
+    margin-inline: auto;
+}
+.sec-six .grid-wrapper{
+width: 100%;
+height: 100vh;
+display: grid;
+gap: 1.5rem;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 50% 50%;
+}
+
+.sec-siximg{
+    width: 100%;
+    
+}
+#bg-img-div{
+    background-image: url('https://th.bing.com/th/id/OIP.70PVgFxRmsVE2Vye43gn9gHaE8?pid=ImgDet&w=1027&h=685&rs=1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+#second-div{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    
+}
+
+
+#third-div{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    display: flex;
+    flex: 1;
+   
+}
+#second-div div, #third-div div{
+    width: 50%;
+    height: 100%;
+}
+.image-div-0ne{
+    background-image: url("https://www.bing.com/images/blob?bcid=qE.kg8FBSOEF2A");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.image-div-two{
+    background-image: url("https://www.bing.com/images/blob?bcid=qJK9gyCX0OEFJg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+.text-wrapper{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+
+}
+.sec-six .text-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.footer-sec-1{
+    width: 100%;
+}
+
+.footer-img {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+    grid-template-rows: 100%;
+    /* overflow: hidden; */
+
+}
+.footer-img img {
+    width: 100%;
+}
+.individual-footer {
+    width: 100%;
+    height: 100%;
+}
+
+#one-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#two-2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#three-3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#four-4{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#five-5 {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+#six-6 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.footer-sec-two {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+    
+}
+.links-div {
+    display: flex;
+    gap: 8rem;
+}
+
+footer h6 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+footer li {
+    list-style-type: none;
+    margin-bottom: 0.75rem;
+}
+footer a{
+    text-transform: capitalize;
+    font-size: 0.9;
+}
+#footer-form {
+    margin-right: 20rem;
+}
+#good-stuff {
+    margin-bottom: 5px;
+}
+footer p {
+    font-size: 0.9rem;
+    color: grey;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+footer form {
+    width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+    padding-block: 0.6rem;
+    border-bottom: 2px solid black;
+}
+footer input{
+    width: 70%;
+    font-size: 1rem;
+border: none;
+outline: none;
+padding: 10px 5px;
+
+}
+footer form a {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fa-arrow-right-long{
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 992px) {
+    .sec-one .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+       
+    }
+
+}
+@media screen and (max-width: 768px) {
+    .sec-one .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 1.5rem;
+    }
+}
